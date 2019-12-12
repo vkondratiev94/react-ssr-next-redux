@@ -1,7 +1,26 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { getUsers } from "../store/actions";
+import Link from "next/link";
 
-export default class Home extends Component {
+class Home extends Component {
+  componentDidMount() {
+    this.props.dispatch(getUsers());
+  }
+
   render() {
-    return <div>Hello</div>;
+    return (
+      <div>
+        <Link href="/user">
+          <a>Users page</a>
+        </Link>
+      </div>
+    );
   }
 }
+
+const mapStateToProps = state => ({
+  users: state.users
+});
+
+export default connect(mapStateToProps)(Home);

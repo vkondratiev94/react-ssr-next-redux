@@ -1,5 +1,5 @@
 import App from "next/app";
-import React, { Component } from "react";
+import React from "react";
 import withReduxStore from "../lib/with-redux-store";
 import { Provider } from "react-redux";
 
