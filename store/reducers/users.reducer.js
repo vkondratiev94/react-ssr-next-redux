@@ -1,5 +1,5 @@
 export default (state = null, action) => {
-  switch (type) {
+  switch (action.type) {
     case "GET_USERS":
       return { ...state, user: action.payload };
     default:
