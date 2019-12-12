@@ -1,3 +1,6 @@
+// npx create-next-app --example with-redux with-redux-app
+// yarn create next-app --example with-redux with-redux-app
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getUsers } from "../store/actions";
